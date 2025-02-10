@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women's Glasses</title>
+    <link rel="stylesheet" href="{% static 'womenglasses.css' %}">
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to Our Women's Glasses Collection</h1>
+    </header>
+    <main>
+        <div class="product-grid">
+            {% for glass in glasses %}
+            <div class="product">
+                <img src="{{ glass.image.url }}" alt="{{ glass.name }}" />
+                <div>
+                    <h3>{{ glass.name }}</h3>
+                    <p>{{ glass.description }}</p>
+                    <p class="price">Price: ${{ glass.price }}</p>
+                    <a href="{% url 'app1:add_to_cart' id=glass.id %}">
+                        <button class="btn">Add to Cart</button>
+                    </a>
+                </div>
+            </div>
+            {% empty %}
+            <p>No glasses available.</p>
+            {% endfor %}
+        </div>
+    </main>
+</body>
+
+</html>

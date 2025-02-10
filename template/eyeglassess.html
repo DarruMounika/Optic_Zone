@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'eyeglassess.css' %}">
+{% endblock head %}
+{% block body %}
+<img src="{% static 'images/bg1.jpg' %}" alt="" id="img1">
+<div id="d1">
+    <h3>Eyeglasses</h3>
+    <p>Our latest collection of trendy eye glasses are undoubtedly to fall in love with.Cloose from our trendy collection of reading glasses. We have reading glasses with creative designs and promising quality.</p>
+</div>
+<div id="pics">
+    {% for product in products %}
+    <div>
+        <h4>{{ product.name }}</h4>
+        <h4 style="padding-left: 4vw;padding-top: 0vw;">
+            ${{ product.discounted_price }} - <strike>${{ product.original_price }}</strike>
+        </h4>
+        <a href="{% url 'app1:product_detail' id=product.id %}">
+            <img src="{{ product.image.url }}" alt="{{ product.name }}">
+        </a>
+        
+    </div>
+    
+    
+    {% endfor %}
+</div>
+{% endblock body %}

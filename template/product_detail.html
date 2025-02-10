@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ product.name }}</title>
+    <script src="{% static 'product_detail.js' %}" defer></script>
+    <link rel="stylesheet" href="{% static 'product_detail.css' %}">
+</head>
+<body>
+    <section class="product-detail">
+            <div class="inner">
+                <h2>{{ product.name }}</h2>
+                <p>{{ product.description }}</p>
+                <p>Price: {{ product.price }}</p>
+    
+                <div class="quantity-container">
+                    <button style="font-size: 30px;"  id="decrement" class="quantity-btn">-</button>
+                    <input style="font-size: 30px;" type="number" id="quantity" value="1" min="1" readonly>
+                    <button style="font-size: 30px;"  id="increment" class="quantity-btn">+</button>
+                </div>
+                {% if product_type == 'product' %}
+                <a href="{% url 'app1:add_to_cart' id=product.id %}">
+                    <button id="addToCartBtn">Add to Cart</button>
+                </a>
+                {% elif product_type == 'glasses' %}
+                    <a href="{% url 'app1:add_to_cart' id=product.id %}">
+                        <button id="addToCartBtn">Add to Cart</button>
+                    </a>
+                {% endif %}    
+            </div>
+    
+            <div id="image_div">
+                <img src="{{ product.image.url }}" alt="{{ product.name }}">
+            </div>
+        </section>
+    
+        <div id="popupBox" class="popup">
+            <p>Added to cart</p>
+            <a href="{% url 'app1:view_cart' %}"><button id="viewCartBtn">View Cart</button></a>
+            <button id="closePopupBtn" class="close-btn">Close</button>
+        </div>
+           
+    </section>
+    <div class="details_div">
+        <h2>Product Details</h2>
+        <p>Our sunglasses are designed with advanced technology to prevent harsh sunlight and high-energy visible light from damaging or discomforting the eyes. It has a thin protective layer that reflects the sun light and comforts the eyes. With a stylish design and comfortable fit, it is a must buy for this summer.</p>
+   </div>
+   <div class="container">
+    <h2>Recommended Products</h2>
+    <div class="products">
+        {% for product in products %}
+    <div class="product">
+        <h3>{{ product.name }}</h3>
+        <p>Price: ${{ product.price }}</p>
+
+        {% if product.old_price %}
+        <p><s>${{ product.old_price }}</s></p>
+        {% endif %}
+
+        {% if product.is_on_sale %}
+        <span class="sale-badge">Sale</span>
+        {% endif %}
+
+        
+        <img src="{{ product.image.url }}" alt="{{ product.name }}" style="width: 200px; height: auto;">
+    </div>
+{% endfor %}
+    </div>
+</div>
+
+
+
+</body>
+</html>

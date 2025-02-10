@@ -1,0 +1,547 @@
+#mdiv {
+    width: 100%;
+    height: auto; /* Changed to auto for better responsiveness */
+    background-image: linear-gradient(15deg, rgb(169, 218, 240), rgb(247, 243, 243));
+    transform:translate(0vw,26vh);
+    display:flex;
+    float:left;
+    background-color: blue;
+}
+#subdiv1{
+    width:50%;
+    height:60vh;
+    /* background-color: brown; */
+    font-size: 1.5vw;
+    padding:2vw;
+    padding-left: 0vw;
+    transform: translate(0vw,15vh);
+}
+#home {
+    width: 100%;
+    height: 100%;
+}
+
+#sum {
+    font-size: 1.7vw;
+    font-weight: 100;
+}
+
+#coll {
+    font-size: 4vw;
+    color: rgba(4, 4, 105, 0.815);
+}
+
+#enh {
+    font-size: 1.3vw; /* Responsive font size */
+}
+
+#shop {
+    width: 30%;
+    height: 8vh;
+    background-color: rgba(4, 4, 105, 0.815);
+    border-radius: 20px;
+    font-size: 1vw;
+}
+
+#sh {
+    text-decoration: none;
+    font-size: 1.8vw; /* Responsive font size */
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+}
+.m{
+    transform: translate(7vw,10vh);
+    margin:0.4vw;
+}
+#subdiv2{
+    width:50%;
+    height:100%;
+    font-weight: 100;
+}
+
+.features-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    background-color: white;
+    flex-wrap: wrap; 
+    /* background-color: brown; */
+    transform: translate(0vw,26vh);
+    padding:2vw;
+}
+
+.feature-card {
+    text-align: center;
+    flex: 1;
+    border-right: 0.71px solid #e0e0e0;
+}
+.feature-card:last-child {
+    border-right: none;
+}
+
+.feature-icon {
+    width:6vw;
+    height:8vh;
+    background-color: #f4f4f4;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:5vw;
+    margin-bottom: 1vw;
+    margin-left: 9vw;
+}
+
+.feature-icon img {
+    width: 3vw;
+    height: 4vh;
+}
+
+.feature-title {
+    font-size: 1.6vw; /* Responsive font size */
+    font-weight: bold;
+    color: #322d4f;
+    margin-bottom: 2vw;
+}
+
+.feature-description {
+    font-size: 1.2vw; /* Responsive font size */
+    color: #666;
+    line-height: 1.6;
+}
+
+.container {
+    display: flex;
+    gap: 25px;
+    padding: 20px;
+    width: 94%;
+    height: auto; /* Changed to auto for better responsiveness */
+    float: left;
+    transform: translate(0vw,30vh);
+}
+
+.card {
+    width: 100%;
+    height: auto; /* Changed to auto for better responsiveness */
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-left: 30px;
+    display: flex;
+    float:left;
+}
+
+.card img {
+    width: 110%;
+}
+
+.card-content {
+    position: absolute;
+    /* top: 0;
+    left: 0; */
+    width: 100%;
+    height: 100%;
+    /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)); */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    /* text-align: center; */
+    padding-right: 5vw;
+    padding-left: 0vw;
+    padding-bottom: 0vw;
+}
+.card-content h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+.card-content p {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+.card-content a {
+    background-color: #4a4aff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+.card-content a:hover {
+    background-color: #3a3ae0;
+}
+button{
+    width:30%;
+    height:10vh;
+    background-color: #3a3ae0;
+    border:none;
+    border-radius: 2vw;
+    margin:1vw;
+    margin-top: 2vw;
+    color:rgba(255, 255, 255, 0.865);
+}
+
+
+.product-grid {
+    display: flex;
+    float:left;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 0 20px;
+    margin-top: 300px;
+}
+
+.product-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    min-width: 10px;
+    /* margin-left: 50px; */
+    display:felx;
+    float:left;
+
+}
+
+.product-item img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product-title {
+    font-size: 2rem; /* Responsive font size */
+    margin: 10px 0;
+    color: #333;
+    font-weight: bold;
+}
+.product-description{
+    font-size: 1.2rem;
+}
+.product-price {
+    font-size: 2rem; /* Responsive font size */
+    color:#17179e;
+    background-color: #c1bbbb;
+    font-weight: bold;
+    border-radius: 30px;
+}
+
+.product-price del {
+    color: #888;
+    margin-right: 5px;
+}
+
+.sale-label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #e74c3c;
+    color: #fff;
+    font-size: 0.8rem; /* Responsive font size */
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.product-item-wrapper {
+    position: relative;
+}
+
+.banner {
+    background-image: url('../static/images/background.jpeg');
+    background-size: cover;
+    background-position: center;
+    width: 102vw;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+.banner-content {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px 40px;
+    border-radius: 8px;
+    margin-left: 50px;
+}
+
+.banner-content h1 {
+    font-size: 2rem; /* Responsive font size */
+    margin-bottom: 10px;
+}
+
+.banner-content p {
+    font-size: 1rem; /* Responsive font size */
+    margin-bottom: 20px;
+}
+
+.banner-content a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    background-color: #1e2a44;
+    padding: 10px 20px;
+}
+
+
+
+.promo-section {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 20px;
+    flex-wrap: wrap; /* Added for responsiveness */
+}
+
+.promo-card {
+    flex: 1;
+    max-width: 300px;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-left: 150px;
+}
+
+.promo-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.promo-card h2 {
+    font-size: 1.5rem; /* Responsive font size */
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.promo-card p {
+    font-size: 1rem; /* Responsive font size */
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.promo-card a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #1e2a44;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem; /* Responsive font size */
+}
+
+
+#best {
+    margin-top: 20px;
+    width: 100%;
+    height: auto; /* Changed to auto for better responsiveness */
+}
+
+.container1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin-top: -120px;
+}
+
+.products {
+    display: flex;
+    gap: 75px;
+    padding: 20px;
+    flex-wrap: wrap; /* Added for responsiveness */
+    margin-left: 160px;
+}
+
+.product {
+    width: 300px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+}
+
+.product h3 {
+    margin-top: 10px;
+}
+
+.product p {
+    margin-top: 5px;
+}
+.sale {
+    background-color: #f00;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .products {
+        flex-direction: column;
+    }
+
+    .product {
+        width: 100%;
+    }
+
+    #sum, #coll, #enh {
+        margin: 10px; /* Adjusted margin for smaller screens */
+        font-size: 1rem; /* Responsive font size */
+    }
+
+    .feature-title, .feature-description {
+        font-size: 1rem; /* Responsive font size */
+    }
+
+    .banner-content h1 {
+        font-size: 1.5rem; /* Responsive font size */
+    }
+
+    .banner-content p {
+        font-size: 0.9rem; /* Responsive font size */
+    }
+
+    .promo-card h2 {
+        font-size: 1.2rem; /* Responsive font size */
+    }
+
+    .promo-card p {
+        font-size: 0.9rem; /* Responsive font size */
+    }
+}
+
+.header {
+    background: linear-gradient(to right, #a8c0ff, #3f2b96);
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+    height: 40vh;
+}
+
+.header-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.header-content p {
+    font-size: 1.2rem;
+    margin: 5px 0;
+}
+
+.header-content button {
+    margin-top: 20px;
+    background-color: #fff;
+    color: #3f2b96;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.brands {
+    text-align: center;
+    padding: 20px;
+}
+
+.brands h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    margin-left: 300px;
+}
+
+.brand-logos {
+    display: flex;
+    justify-content: center;
+    gap: 160px;
+    margin-top: 30px;
+    margin-left: 300px;
+}
+
+.brand-logos span {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.promotion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background: #f9f9f9;
+    flex-wrap: wrap; /* Added for responsiveness */
+    margin-left: 440px;
+    margin-top: 50px;
+}
+
+
+.promo-content {
+    max-width: 50%;
+}
+
+.promo-content h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.promo-content h2 span {
+    color: #3f2b96;
+}
+
+.promo-content p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.promo-content button {
+    background-color: #3f2b96;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.promotion img {
+    max-width: 90%;
+    border-radius: 10px;
+}
+
+@media (max-width: 868px) {
+    .promotion {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .promo-content {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .promotion img {
+        max-width: 100%;
+    }
+}
+
+

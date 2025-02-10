@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+{% endblock head %}
+
+{% block body %}
+    <div class="login-container">
+        <h2 class="login-title">Sign In</h2>
+        <form action="" method="POST" id="loginForm">
+            {% csrf_token %}
+            
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="Enter your email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" class="form-input" placeholder="Enter your password" required>
+            </div>
+            
+            <button type="submit" class="login-button">Sign In</button>
+            
+            <p class="login-text">
+                <a href="{% url 'app1:reg' %}" class="login-link">Register </a>
+            </p>
+        </form>
+    </div>
+{% endblock body %}

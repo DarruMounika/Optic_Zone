@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men's Glasses Collection</title>
+    <link rel="stylesheet" href="{% static 'menglasses.css' %}">
+</head>
+
+<body>
+    <header>
+        <center>
+            <h1>Welcome to Our Men's Glasses Collection</h1>
+        </center>
+    </header>
+
+    <main>
+        <div class="product-grid">
+            {% for glass in glasses %}
+            <div class="product">
+                <img src="{{ glass.image.url }}" alt="{{ glass.name }}">
+                <div>
+                    <h3>{{ glass.name }}</h3>
+                    <p>{{ glass.description }}</p>
+                    <p class="price">Price: ${{ glass.price }}</p>
+                    <a href="{% url 'app1:product_detail' id=glass.id %}" class="btn">
+                        View Details
+                    </a>
+                </div>
+            </div>
+            {% empty %}
+            <p class="no-products">No glasses available.</p>
+            {% endfor %}
+        </div>
+    </main>
+</body>
+
+</html>

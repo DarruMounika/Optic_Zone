@@ -1,0 +1,70 @@
+<!-- cart.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+    <link rel="stylesheet" href="{% static 'tablecart.css' %}" />
+  </head>
+  <body>
+    <h1>Your Cart</h1>
+    <table border="1">
+      <tr>
+        <th>Product Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Image</th>
+        <th>Action</th>
+      </tr>
+      {% for cart_item in cart_items %}
+<tr>
+    {% if cart_item.product %}
+        <td>{{ cart_item.product.name }}</td>
+        <td>${{ cart_item.product.price }}</td>
+        <td>
+            <form action="{% url 'app1:update_quantity' id=cart_item.id %}" method="post">
+                {% csrf_token %}
+                <input type="number" name="quantity" value="{{ cart_item.quantity }}" min="1" />
+                <button type="submit">Update</button>
+            </form>
+        </td>
+        <td><img src="{{ cart_item.product.image.url }}" alt="{{ cart_item.product.name }}" width="100" /></td>
+    {% elif cart_item.glasses %}
+        <td>{{ cart_item.glasses.name }}</td>
+        <td>${{ cart_item.glasses.price }}</td>
+        <td>
+            <form action="{% url 'app1:update_quantity' id=cart_item.id %}" method="post">
+                {% csrf_token %}
+                <input type="number" name="quantity" value="{{ cart_item.quantity }}" min="1" />
+                <button type="submit">Update</button>
+            </form>
+        </td>
+        <td><img src="{{ cart_item.glasses.image.url }}" alt="{{ cart_item.glasses.name }}" width="100" /></td>
+    {% elif cart_item.wglasses %}  <!-- Add Women's Glasses condition -->
+        <td>{{ cart_item.wglasses.name }}</td>
+        <td>${{ cart_item.wglasses.price }}</td>
+        <td>
+            <form action="{% url 'app1:update_quantity' id=cart_item.id %}" method="post">
+                {% csrf_token %}
+                <input type="number" name="quantity" value="{{ cart_item.quantity }}" min="1" />
+                <button type="submit">Update</button>
+            </form>
+        </td>
+        <td><img src="{{ cart_item.wglasses.image.url }}" alt="{{ cart_item.wglasses.name }}" width="100" /></td>
+    {% endif %}
+    <td><button><a href="{% url 'app1:delete' cart_item.id %}">Remove</a></button></td>
+</tr>
+{% empty %}
+<tr>
+    <td colspan="5">Your cart is empty.</td>
+</tr>
+{% endfor %}
+
+    </table>
+    <button id="back">
+      <a href="{% url 'app1:home' %}">Back to Shopping</a>
+    </button>
+  </body>
+</html>

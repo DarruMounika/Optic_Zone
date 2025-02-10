@@ -1,0 +1,222 @@
+
+body, h1, h2, h3, p, div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+}
+.main{
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.hero { 
+    position: relative;
+    top: 200px;
+    background-image: url('../static/images/pngtree-sunglasses-on-the-beach-with-a-blue-view-picture-image_3171161.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    border-radius: 2vw;
+}
+
+.overlay {
+    background-color: rgba(64, 64, 128, 0.7);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.overlay h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.overlay p {
+    font-size: 1rem;
+}
+
+.product-grid {
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header h2 {
+    font-size: 1.5rem;
+}
+
+.sort select {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.product-grid {
+    padding: 20px;
+    position: relative;
+    top: 200px;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Ensures responsiveness */
+    width: 100%;
+}
+
+.header h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.sort {
+    display: flex;
+    align-items: center;
+}
+
+.sort label {
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sort {
+        margin-top: 10px;
+    }
+}
+
+.products{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.product-card {
+    border: 0.0001px solid #ddd;
+    padding: 10px;
+    margin: 20px;
+    display: inline-block;
+    justify-content: center;
+    text-align: center;
+    width: 300px;
+    height: fit-content;
+
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+.pd_name{
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 10px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.pd_name:hover{
+    color: rgb(21, 21, 122);
+}
+.pd_price{
+    font-size: 25px;
+    padding: 10px;
+}
+.product-card:hover{
+    box-shadow: 5px 5px 9px ;
+    border-radius: 10px;
+}
+/* .badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #6a5acd;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+} */
+@media screen and (max-width: 768px) {
+    .hero {
+        height: 40vh;
+    }
+    .overlay h1 {
+        font-size: 2rem;
+    }
+
+    .overlay p {
+        font-size: 0.9rem;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .products {
+        grid-template-columns: 1fr;
+    }
+    .sort {
+        margin-top: 10px;
+    }
+
+    .product-card {
+        width: 90%;
+    }
+}
+@media (max-width: 480px) {
+    .hero {
+        height: 35vh;
+    }
+
+    .overlay h1 {
+        font-size: 1.5rem;
+    }
+
+    .overlay p {
+        font-size: 0.8rem;
+    }
+
+    .header h2 {
+        font-size: 1.5rem;
+    }
+
+    .sort select {
+        width: 100%;
+    }
+
+    .products {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-card {
+        width: 100%;
+    }
+}

@@ -1,0 +1,212 @@
+{% extends 'base.html' %} {% load static %} {% block head %}
+<link rel="stylesheet" href="{% static 'home.css' %}" />
+{% endblock head %} {% block body %}
+<div id="mdiv">
+  <div id="subdiv1">
+    <h4 class="m" id="sum">30% off on our Fantastic Summer</h4>
+    <h1 class="m" id="coll">COLLECTIONS!!</h1>
+
+    <pre>
+        <p id="enh" class="m">Enhance the visual impression of your face to multiple 
+levels. Compare our styles on various faces- Quality 
+Promised.</p></pre>
+
+    <div id="shop" class="m">
+      <a id="sh" href="">Shop Now!</a>
+    </div>
+  </div>
+  <div id="subdiv2">
+    <img id="home" src="{% static 'images/home img.png' %}" alt="" />
+  </div>
+</div>
+
+<div class="features-section">
+  <div class="feature-card">
+    <div class="feature-icon">
+      <h1 style="font-size: 3vw">⛟</h1>
+    </div>
+    <div class="feature-title">Free Shipping</div>
+    <div class="feature-description">
+      Enjoy free shipping on all your orders.
+    </div>
+  </div>
+  <div class="feature-card">
+    <div class="feature-icon">
+      <h1 style="font-size: 3vw">⌚</h1>
+    </div>
+    <div class="feature-title">24/7 Support</div>
+    <div class="feature-description">
+      Reach out to us anytime. We are at your service.
+    </div>
+  </div>
+  <div class="feature-card">
+    <div class="feature-icon">
+      <h1 style="font-size: 3vw">🎴</h1>
+    </div>
+    <div class="feature-title">Offer Card</div>
+    <div class="feature-description">
+      Enjoy discounts using our offer cards and coupon codes.
+    </div>
+  </div>
+  <div class="feature-card">
+    <div class="feature-icon">
+      <h1 style="font-size: 3vw">🔐</h1>
+    </div>
+    <div class="feature-title">Secure Payment</div>
+    <div class="feature-description">
+      We provide secure payment gateways for your transactions.
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <!-- First Card -->
+  <div class="card">
+    <img src="{% static 'images/hpic1.jpg' %}" alt="" />
+    <div class="card-content">
+      <p>Up to 20 % off on</p>
+      <h2>HOT PRODUCTS!</h2>
+      <button>SHOP NOW !</button>
+    </div>
+  </div>
+
+  <!-- Second Card -->
+  <div class="card">
+    <img src="{% static 'images/hpic2.jpg' %}" alt="" />
+    <div class="card-content">
+      <p>How to choose the right frame?</p>
+      <h2>FRAMES THAT FIT RIGHT!</h2>
+      <button>READ NOW !</button>
+    </div>
+  </div>
+</div>
+
+<div class="product-grid">
+  {% for product in sunglasses %}
+  <div class="product-item">
+      <div class="product-item-wrapper">
+          {% if product.image %}
+          <a href="{% url 'app1:product_detail' id=product.id %}"><img src="{{ product.image.url }}" alt="{{ product.name }}">
+            {% else %}
+            <a href="{% url 'app1:product_detail' id=product.id %}"><img src="{% static 'images/default.png' %}" alt="Default Image"></a>
+            {% endif %}
+      </div>
+      <div class="product-title">{{ product.name }}</div>
+      <div class="product-description">{{ product.description }}</div>
+      <div class="product-price">${{ product.price }}</div>
+  </div>
+  {% endfor %}
+</div>
+<div class="product-grid">
+  {% for product in eyeglasses %}
+  <div class="product-item">
+      <div class="product-item-wrapper">
+          {% if product.image %}
+          <a href="{% url 'app1:product_detail' id=product.id %}"><img src="{{ product.image.url }}" alt="{{ product.name }}">
+          </a>
+          {% else %}
+          <a href="{% url 'app1:product_detail' id=product.id %}"><img src="{% static 'images/default.png' %}" alt="Default Image"></a>
+          
+          {% endif %}
+      </div>
+      <div class="product-title">{{ product.name }}</div>
+      <div class="product-description">{{ product.description }}</div>
+      <div class="product-price">${{ product.price }}</div>
+  </div>
+  {% endfor %}
+</div>
+<div class="banner">
+  <div class="banner-content">
+    <p>Hot Deals:</p>
+    <h1>GEAR UP THIS SUMMER! PLACE YOUR FIRST ORDER AND GET 15% OFF.</h1>
+    <a href="#">Shop Now</a>
+  </div>
+</div>
+
+<div class="promo-section">
+  <div class="promo-card">
+    <img src="{% static 'images/m1img.png' %}" alt="Men's Glasses" />
+    <h2>MEN'S GLASSES</h2>
+    <p>Flat 20% off on flashy</p>
+    <a href="{% url 'app1:menglasses_list' %}">Shop Now</a>
+  </div>
+
+  <div class="promo-card">
+    <img src="{% static 'images/f1img.png' %}" alt="Women's Glasses" />
+    <h2>WOMEN'S GLASSES</h2>
+    <p>Flat 10% off on sparkling</p>
+    <a href="{% url 'app1:womenglasses' %}">Shop Now</a>
+  </div>
+
+  <div class="promo-card">
+    <img src="{% static 'images/f2img.png' %}" alt="Sunglasses" />
+    <h2>SUNGLASSES</h2>
+    <p>Flat 30% off on trendy</p>
+    <a href="#">Shop Now</a>
+  </div>
+</div>
+
+<div id="best">
+  <h1 style="font-size: 40px; margin-left: 625px">Our Best Sellers</h1>
+</div>
+
+<div class="container1">
+  <div class="products">
+    <div class="product">
+      <div class="sale">Sale</div>
+      <img
+        src="{% static 'images/6img.jpg' %}"
+        alt="Alliance The Jam Sunglasses"
+      />
+      <h3>Alliance The Jam Sunglasses</h3>
+      <p>$19.00 - $24.00</p>
+    </div>
+    <div class="product">
+      <div class="sale">Sale</div>
+      <img
+        src="{% static 'images/5img.jpg' %}"
+        alt="Alliance The Jam Sunglasses"
+      />
+      <h3>Alliance The Jam Sunglasses</h3>
+      <p>$19.00 - $24.00</p>
+    </div>
+    <div class="product">
+      <div class="sale">Sale</div>
+      <img
+        src="{% static 'images/4img.jpg' %}"
+        alt="Alliance The Jam Sunglasses"
+      />
+      <h3>Alliance The Jam Sunglasses</h3>
+      <p>$19.00 - $24.00</p>
+    </div>
+  </div>
+</div>
+
+<header class="header">
+  <div class="header-content">
+    <h1>Look your best with our trend-setting styles.</h1>
+    <p>Flamboyant styles exclusively for this spring.</p>
+    <p>Celebrate this spring with our new styles</p>
+    <button>Shop Now</button>
+  </div>
+</header>
+
+<section class="brands">
+  <h2>Our Brands</h2>
+  <div class="brand-logos">
+    <span>𝖋𝖆𝖘𝖙</span>
+    <span>𝖇𝖑𝖔𝖇</span>
+    <span>𝓼𝓽𝔂𝓵𝓮</span>
+    <span>𝖏𝖚𝖒𝖕</span>
+  </div>
+</section>
+
+<section class="promotion">
+  <div class="promo-content">
+    <h2>Huge discounts in our <span>Trendy Glasses</span></h2>
+    <p>Save up to 60% Off Women's Glasses</p>
+    <button>Shop Now</button>
+  </div>
+  <img src="{% static 'images/images.jpeg' %}" alt="Woman wearing glasses" />
+</section>
+{% endblock body %}

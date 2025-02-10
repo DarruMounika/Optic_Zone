@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'contact.css' %}">
+{% endblock head %}
+{% block body %}
+<div class="container">
+    <center><h3>Do not hesitate to contact us with any queries.</h3></center>
+    <p>Give us a ring or a ping anytime, round the clock at:</p>
+    
+    <div class="contact-info">
+        <div class="contact-item">
+            <i class="fas fa-user"></i> Kelley A. Fleming<br>
+            <i class="fas fa-map-marker-alt"></i> 196 Woodside Circle, Mobile, FL 36602<br>
+            <i class="fas fa-phone"></i> 240-256-1942
+        </div>
+        <div class="contact-item">
+            <i class="fas fa-envelope"></i> info@tourism.com<br>
+            <i class="fas fa-globe"></i> www.tourism.com
+        </div>
+    </div>
+    
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4760.636833603453!2d-1.595017!3d53.373352!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487980259e6e6c17%3A0x2379910fc9cf23ac!2sWyming%20Brook!5e0!3m2!1sen!2sus!4v1737963292168!5m2!1sen!2sus"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+{% endblock body %}

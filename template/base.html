@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'base.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    {% block head %}
+    {% endblock head %}
+</head>
+
+<body>
+    <header>
+        <i class="fa-solid fa-envelope" style="margin-right: 1vw;"></i><span>info@domainname.com</span><span style="font-weight: 300;">|</span>
+        <span>0123456789</span></p>
+        <center><img src="{% static 'images/logo-04.png' %}" alt=""></center>
+    </header>
+    <nav>
+        <div id="first"></div>
+        <div id="middle">
+            <div>
+                <h4><a href="{% url 'app1:home' %}">Home</a></h4>
+            </div>
+            <div>
+                <h4> <a href="{% url 'app1:sunglass' %}">Sunglasses</a></h4>
+            </div>
+            <div>
+                <h4><a href="{% url 'app1:eyeglassess' %}">Eyeglasses</a></h4>
+            </div>
+            <div>
+                <h4><a href="{% url 'app1:termsandconditions' %}">Terms&Conditions</a></h4>
+            </div>
+            <div>
+                <h4><a href="{% url 'app1:contact' %}">Contact</a></h4>
+            </div>
+            <div>
+                <h4><a href="{% url 'app1:reg' %}">Register</a></h4>
+            </div>
+            <div>
+                <h4><a href="{% url 'app1:login' %}">Login</a></h4>
+            </div>
+        </div>
+        <div id="last"></div>
+    </nav>
+    {% block body %}
+    {% endblock body %}
+    <footer>
+        <div id="up-f">
+            <h2><i class="fa-regular fa-envelope-open" style="margin-right: 0.5vw;"></i>Join The Community To Be Updated Firstly?
+            </h2>
+            <form action="" id="form">
+                <input class='input' type="text" placeholder="Name">
+                <input class='input' type="email" placeholder="Email">
+                <input class='input' id='subscribe' type="submit" value="Subscribe">
+            </form>
+        </div>
+        <div id="down-f">
+            <div id="icons">
+                <i class="fa-solid fa-house" id="ic-1"></i>
+                <i class="fa-solid fa-location-dot" class="ic"></i>
+                <i class="fa-regular fa-envelope-open" class="ic"></i>
+                <i class="fa-regular fa-envelope-open" class="ic"></i>
+            </div>
+            <ul type="no-referrer">
+                <li><p>+91 123456789</p></li>
+                <li><p>113, Raj-hans point India</p></li>
+                <li><p>info@gmail.com</p></li>
+                <li><p>Facebook, Twitter, Instagram</p></li>
+            </ul>
+            <hr>
+            <h3>© 2019 Optic Zone,All Rights Reserved.</h3>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0f172a, #3b0764); /* Dark Navy Blue to Deep Purple */
+    color: white;
+    margin: 20px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    color: #f8f8f8;
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.2);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Table Styles */
+table {
+    width: 90%;
+    max-width: 800px;
+    border-collapse: collapse;
+    background: #1e1e2f; /* Dark Card-Like Background */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    animation: slideUp 1s ease-in-out;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #444;
+}
+
+th {
+    background: linear-gradient(135deg, #4a47a3, #5f5bd9);
+    color: #fff;
+    font-size: 18px;
+}
+
+/* Image Styling */
+img {
+    max-width: 80px;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
+/* Buttons */
+button {
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Remove Button */
+#re {
+    background: #ff416c;
+    box-shadow: 0px 0px 10px rgba(255, 65, 108, 0.8);
+}
+
+#re a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#re:hover {
+    background: #ff1e5a;
+    transform: scale(1.1);
+}
+
+/* Back to Shopping Button */
+#back {
+    display: block;
+    margin: 20px auto;
+    background: #00c9a7;
+    box-shadow: 0px 0px 10px rgba(0, 201, 167, 0.8);
+}
+
+#back a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#back:hover {
+    background: #00a387;
+    transform: scale(1.1);
+}
+
+/* Responsive for Mobile */
+@media screen and (max-width: 600px) {
+    th, td {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    img {
+        max-width: 60px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}

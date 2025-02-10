@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'termsandconditions.css' %}">
+{% endblock head %}
+
+{% block body %}
+<section class="terms-container">
+    <h1>Terms and Conditions</h1>
+    <div class="details">
+        <details class="term">
+            <summary>Our brand is registered under the 'Provisions of Companies Act' of 1956.</summary>
+            <p>Your brand's registration under the Provisions of the Companies Act, 1956 signifies its legal recognition and compliance with the regulatory framework established for corporate governance in India.</p>
+        </details>
+        
+        <details class="term">
+            <summary>Our seasonal offers on glasses last only till the offer expiry date.</summary>
+            <p>Our seasonal offers on glasses are available for a limited time and will only be valid until the specified offer expiry date.</p>
+        </details>
+
+        <details class="term">
+            <summary>Optics Zone has the sole right to stop or extend an existing offer.</summary>
+            <p>Optics Zone reserves the exclusive right to modify, extend, or discontinue any ongoing offer at its discretion.</p>
+        </details>
+
+        <details class="term">
+            <summary>In case of return of glasses, please keep the bills and shipping details handy.</summary>
+            <p>Customers must retain the original bills and shipping details for a smooth return process.</p>
+        </details>
+
+        <details class="term">
+            <summary>We have a XXXXXX-day replacement policy for any return of items.</summary>
+            <p>We offer a replacement policy allowing customers to replace items within the specified period, provided the return conditions are met.</p>
+        </details>
+
+        <details class="term">
+            <summary>Duplication of the product or the product logo is a punishable crime.</summary>
+            <p>Unauthorized duplication of the product or its logo is strictly prohibited and considered a punishable offense under applicable laws.</p>
+        </details>
+
+        <details class="term">
+            <summary>International shipping is charged.</summary>
+            <p>International shipping is subject to additional charges based on the destination and shipping method selected.</p>
+        </details>
+
+        <details class="term">
+            <summary>Our brand does not offer any warranty or guarantee.</summary>
+            <p>Our brand does not provide any warranty or guarantee on its products. All purchases are made at the buyer's discretion.</p>
+        </details>
+    </div>
+</section>
+{% endblock body %}
