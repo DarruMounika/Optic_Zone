@@ -13,9 +13,7 @@
     {% for product in products %}
     <div>
         <h4>{{ product.name }}</h4>
-        <h4 style="padding-left: 4vw;padding-top: 0vw;">
-            ${{ product.discounted_price }} - <strike>${{ product.original_price }}</strike>
-        </h4>
+        <h4>${{ product.price }}</h4>
         <a href="{% url 'app1:product_detail' id=product.id %}">
             <img src="{{ product.image.url }}" alt="{{ product.name }}">
         </a>
